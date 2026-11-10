@@ -17,7 +17,7 @@ def configured() -> bool:
     return all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"))
 
 
-def upload(video_path: str, script: dict, privacy: str = "public") -> dict:
+def upload(video_path: str, script: dict, caption: str, privacy: str = "public") -> dict:
     creds = Credentials(
         token=None,
         refresh_token=os.environ["YT_REFRESH_TOKEN"],
@@ -30,9 +30,9 @@ def upload(video_path: str, script: dict, privacy: str = "public") -> dict:
     tags = script.get("hashtags", [])
     body = {
         "snippet": {
-            "title": f"{script['title']} #Shorts"[:100],
-            "description": script["caption"] + "\n\n" + " ".join(f"#{t}" for t in tags) + " #Shorts",
-            "tags": tags,
+            "title": script["title"][:100],
+            "description": caption,
+            "tags": tags + ["shorts"],
             "categoryId": "22",  # People & Blogs
             "defaultLanguage": "es",
         },

@@ -27,7 +27,7 @@
     }
   ],
   "cta": "Sígueme para más hábitos pequeños",
-  "cta_voiceover": "Sígueme para más hábitos pequeños que sí funcionan.",
+  "cta_voiceover": "Guárdalo y pruébalo mañana. Sígueme para más hábitos pequeños que sí funcionan.",
   "title": "Haz esto los primeros 5 minutos de tu día",
   "caption": "5 minutos que cambian tu día ☀️ ¿Cuál ya haces?",
   "hashtags": [
@@ -36,5 +36,6 @@
     "bienestar",
     "mañana",
     "productividad"
-  ]
+  ],
+  "hook_voiceover": "Deja de agarrar el celular apenas te despiertas. Haz esto los primeros cinco minutos, y el último es el más importante."
 }

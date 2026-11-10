@@ -24,7 +24,7 @@
     }
   ],
   "cta": "¿Vas a comprar algo mañana? Comenta",
-  "cta_voiceover": "¿Vas a comprar algo mañana? Cuéntame en los comentarios.",
+  "cta_voiceover": "Así que ya sabes: mañana es el once del once. ¿Vas a comprar algo? Te leo en los comentarios.",
   "title": "El día de compras más grande del mundo NO es Black Friday",
   "caption": "Mañana 11/11 es el Día de los Solteros 🛍️ ¿Lo conocías?",
   "hashtags": [
@@ -33,5 +33,6 @@
     "blackfriday",
     "datoscuriosos",
     "compras"
-  ]
+  ],
+  "hook_voiceover": "Mañana se gasta más dinero que en Black Friday... y casi nadie en Latinoamérica lo sabe. Quédate al final para saber cuánto."
 }

@@ -17,9 +17,8 @@ def configured() -> bool:
     return bool(os.environ.get("IG_USER_ID") and os.environ.get("IG_ACCESS_TOKEN"))
 
 
-def upload(video_path: str, script: dict, share_to_feed: bool = True) -> dict:
+def upload(video_path: str, caption: str, share_to_feed: bool = True) -> dict:
     uid, token = os.environ["IG_USER_ID"], os.environ["IG_ACCESS_TOKEN"]
-    caption = script["caption"] + "\n\n" + " ".join(f"#{t}" for t in script.get("hashtags", []))
 
     r = requests.post(f"{GRAPH}/{uid}/media", data={
         "media_type": "REELS", "upload_type": "resumable", "caption": caption,

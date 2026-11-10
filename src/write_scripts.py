@@ -32,7 +32,8 @@ class VideoScript(BaseModel):
     cta_voiceover: str
     title: str = Field(description="YouTube title, max 80 chars")
     caption: str = Field(description="Caption for TikTok/Instagram, may include 1-2 emojis")
-    hashtags: list[str] = Field(description="4-6 hashtags without #")
+    hashtags: list[str] = Field(description="5 hashtags without #, ordered: 2 trend tags people are "
+                                "searching today, then 3 niche tags in Spanish; lowercase, no spaces")
 
 
 class Batch(BaseModel):

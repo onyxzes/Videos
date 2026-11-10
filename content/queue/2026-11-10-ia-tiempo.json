@@ -19,7 +19,7 @@
     }
   ],
   "cta": "¿Cuál probarías primero?",
-  "cta_voiceover": "¿Cuál probarías primero? Te leo.",
+  "cta_voiceover": "¿Cuál vas a probar primero? Te leo en los comentarios.",
   "title": "3 cosas que le pido a la IA que me ahorran horas",
   "caption": "La IA como asistente, no como reemplazo 🤖",
   "hashtags": [
@@ -28,5 +28,6 @@
     "productividad",
     "tips",
     "tecnologia"
-  ]
+  ],
+  "hook_voiceover": "Nadie te dice esto sobre la inteligencia artificial: lo más útil no es lo que crees. El tercero me cambió la semana."
 }

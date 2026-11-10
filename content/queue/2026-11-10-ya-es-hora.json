@@ -19,7 +19,7 @@
     }
   ],
   "cta": "¿Equipo Navidad desde noviembre o desde diciembre?",
-  "cta_voiceover": "¿Eres de los que ponen Navidad desde noviembre, o esperas a diciembre?",
+  "cta_voiceover": "Ahora dime: ¿eres equipo Navidad desde noviembre, o esperas a diciembre?",
   "title": "Faltan 45 días para Navidad. Ya es hora.",
   "caption": "Ya es hora 🎄 ¿Equipo noviembre o equipo diciembre?",
   "hashtags": [
@@ -28,5 +28,6 @@
     "itstime",
     "noviembre",
     "christmas"
-  ]
+  ],
+  "hook_voiceover": "Faltan cuarenta y cinco días para Navidad... y ya sabes lo que eso significa. Ya es hora."
 }

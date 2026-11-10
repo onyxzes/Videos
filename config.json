@@ -2,14 +2,52 @@
   "language": "es",
   "audience": "hispanohablantes (México, LatAm, España)",
   "niche": "datos curiosos, tendencias y tips útiles",
+  "elevenlabs": {
+    "voice_id": "pNInz6obpgDQGcFmaJgB",
+    "voice_name": "Adam",
+    "model_id": "eleven_multilingual_v2",
+    "stability": 0.35,
+    "style": 0.45,
+    "speed": 1.08
+  },
   "tts_voice": "es-MX-JorgeNeural",
-  "tts_rate": "+8%",
-  "trends_geo": ["MX", "US", "ES"],
+  "tts_rate": "+12%",
+  "hashtags": {
+    "broad": {
+      "tiktok": [
+        "parati",
+        "fyp",
+        "viral"
+      ],
+      "instagram": [
+        "reels",
+        "viral"
+      ],
+      "youtube": [
+        "shorts"
+      ]
+    }
+  },
+  "trends_geo": [
+    "MX",
+    "US",
+    "ES"
+  ],
   "videos_per_run": 1,
   "min_queue": 4,
   "platforms": {
-    "youtube": {"enabled": true, "privacy": "public"},
-    "instagram": {"enabled": true, "share_to_feed": true},
-    "tiktok": {"enabled": true, "mode": "inbox", "privacy_level": "SELF_ONLY"}
+    "youtube": {
+      "enabled": true,
+      "privacy": "public"
+    },
+    "instagram": {
+      "enabled": true,
+      "share_to_feed": true
+    },
+    "tiktok": {
+      "enabled": true,
+      "mode": "inbox",
+      "privacy_level": "SELF_ONLY"
+    }
   }
 }

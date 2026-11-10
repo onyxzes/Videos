@@ -35,7 +35,7 @@ def _access_token() -> str:
     return data["access_token"]
 
 
-def upload(video_path: str, script: dict, mode: str = "inbox", privacy_level: str = "SELF_ONLY") -> dict:
+def upload(video_path: str, caption: str, mode: str = "inbox", privacy_level: str = "SELF_ONLY") -> dict:
     token = _access_token()
     h = {"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=UTF-8"}
     size = os.path.getsize(video_path)
@@ -44,8 +44,7 @@ def upload(video_path: str, script: dict, mode: str = "inbox", privacy_level: st
     source = {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": chunk, "total_chunk_count": count}
 
     if mode == "direct":
-        title = script["caption"] + " " + " ".join(f"#{t}" for t in script.get("hashtags", []))
-        body = {"post_info": {"title": title[:2200], "privacy_level": privacy_level,
+        body = {"post_info": {"title": caption[:2200], "privacy_level": privacy_level,
                               "disable_comment": False, "disable_duet": False,
                               "disable_stitch": False, "is_aigc": True},
                 "source_info": source}

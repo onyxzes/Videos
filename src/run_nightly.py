@@ -11,6 +11,7 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import hashtags  # noqa: E402
 import render  # noqa: E402
 import trends  # noqa: E402
 import upload_instagram  # noqa: E402
@@ -48,13 +49,15 @@ def main(dry_run: bool = False):
             continue
 
         results = script.setdefault("results", {})
+        caps = {p: hashtags.caption(script, p, cfg) for p in ("youtube", "instagram", "tiktok")}
+        script["captions"] = caps
         jobs = [
             ("youtube", upload_youtube, lambda: upload_youtube.upload(
-                str(video), script, plats["youtube"].get("privacy", "public"))),
+                str(video), script, caps["youtube"], plats["youtube"].get("privacy", "public"))),
             ("instagram", upload_instagram, lambda: upload_instagram.upload(
-                str(video), script, plats["instagram"].get("share_to_feed", True))),
+                str(video), caps["instagram"], plats["instagram"].get("share_to_feed", True))),
             ("tiktok", upload_tiktok, lambda: upload_tiktok.upload(
-                str(video), script, plats["tiktok"].get("mode", "inbox"),
+                str(video), caps["tiktok"], plats["tiktok"].get("mode", "inbox"),
                 plats["tiktok"].get("privacy_level", "SELF_ONLY"))),
         ]
         for name, mod, job in jobs:
@@ -70,6 +73,14 @@ def main(dry_run: bool = False):
                 traceback.print_exc()
                 results.setdefault("errors", {})[name] = str(e)[:500]
 
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            with open(summary, "a", encoding="utf-8") as f:
+                f.write(f"## {script['title']}\n\n")
+                for k, v in results.items():
+                    f.write(f"- **{k}**: {v}\n")
+                f.write(f"\n**Texto para TikTok** (copiar y pegar al publicar el borrador):\n\n"
+                        f"```\n{caps['tiktok']}\n```\n\n")
         ok = [k for k in results if k != "errors"]
         if ok:
             PUBLISHED.mkdir(parents=True, exist_ok=True)

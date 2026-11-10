@@ -23,7 +23,7 @@
     }
   ],
   "cta": "Etiqueta a alguien que necesita ir al doctor",
-  "cta_voiceover": "Etiqueta a alguien que tiene pendiente ir al doctor.",
+  "cta_voiceover": "Ahora ya sabes por qué. Etiqueta a ese amigo que tiene pendiente ir al doctor.",
   "title": "¿Por qué tantos hombres se dejan bigote en noviembre?",
   "caption": "Movember no es solo moda 🥸 Es salud.",
   "hashtags": [
@@ -31,5 +31,6 @@
     "saludmasculina",
     "noviembre",
     "datoscuriosos"
-  ]
+  ],
+  "hook_voiceover": "Si ves a muchos hombres con bigote este mes, no es moda. Hay una razón, y es más seria de lo que parece."
 }
