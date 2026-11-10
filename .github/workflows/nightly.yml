@@ -1,0 +1,61 @@
+name: Publicar videos (noche)
+
+on:
+  schedule:
+    # Horas en UTC. 07:00, 09:00 y 11:00 UTC = 1:00, 3:00 y 5:00 en Ciudad de México.
+    - cron: "0 7 * * *"
+    - cron: "0 9 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo renderizar (no subir)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Generar y publicar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        run: python src/run_nightly.py ${{ inputs.dry_run && '--dry-run' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: videos-${{ github.run_id }}
+          path: out/*.mp4
+          retention-days: 14
+      - name: Guardar estado de la cola
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "video-bot"
+          git config user.email "video-bot@users.noreply.github.com"
+          git add content trends
+          git diff --cached --quiet || git commit -m "bot: publicar video y actualizar cola"
+          git push

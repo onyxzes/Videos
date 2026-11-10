@@ -1,0 +1,40 @@
+{
+  "id": "2026-11-10-mananas",
+  "label": "RUTINA",
+  "topic": "Rutina de mañana de 5 minutos",
+  "trend_reason": "Formato 'morning mantra' en tendencia en Reels/TikTok.",
+  "hook": "Haz esto los primeros 5 minutos de tu día",
+  "slides": [
+    {
+      "text": "Minuto 1: agua antes que el celular",
+      "voiceover": "Minuto uno: un vaso de agua antes de tocar el celular."
+    },
+    {
+      "text": "Minuto 2: luz natural en la cara",
+      "voiceover": "Minuto dos: abre la cortina. La luz de la mañana ayuda a despertar tu cuerpo."
+    },
+    {
+      "text": "Minuto 3: estírate",
+      "voiceover": "Minuto tres: estírate, aunque sea un poco."
+    },
+    {
+      "text": "Minuto 4: escribe UNA prioridad",
+      "voiceover": "Minuto cuatro: escribe una sola prioridad para hoy."
+    },
+    {
+      "text": "Minuto 5: respira lento",
+      "voiceover": "Minuto cinco: respira lento, cuatro segundos adentro, seis afuera."
+    }
+  ],
+  "cta": "Sígueme para más hábitos pequeños",
+  "cta_voiceover": "Sígueme para más hábitos pequeños que sí funcionan.",
+  "title": "Haz esto los primeros 5 minutos de tu día",
+  "caption": "5 minutos que cambian tu día ☀️ ¿Cuál ya haces?",
+  "hashtags": [
+    "rutina",
+    "habitos",
+    "bienestar",
+    "mañana",
+    "productividad"
+  ]
+}

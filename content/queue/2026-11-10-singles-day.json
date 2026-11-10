@@ -1,0 +1,37 @@
+{
+  "priority": 1,
+  "id": "2026-11-10-singles-day",
+  "label": "11/11",
+  "topic": "Día de los Solteros (11 de noviembre)",
+  "trend_reason": "Mañana es 11/11; arranca la temporada de compras previa a Black Friday.",
+  "hook": "Mañana es el día de compras más grande del mundo... y no es Black Friday",
+  "slides": [
+    {
+      "text": "Se llama Día de los Solteros: 11/11",
+      "voiceover": "Se llama el Día de los Solteros, y se celebra el once del once."
+    },
+    {
+      "text": "Nació en China como una broma universitaria",
+      "voiceover": "Nació en China como una broma entre universitarios: cuatro unos, cuatro personas solas."
+    },
+    {
+      "text": "En 2009 Alibaba lo convirtió en un día de ofertas",
+      "voiceover": "En dos mil nueve, Alibaba lo convirtió en un día de ofertas."
+    },
+    {
+      "text": "Hoy vende más que Black Friday y Cyber Monday juntos",
+      "voiceover": "Y hoy mueve más dinero que Black Friday y Cyber Monday juntos."
+    }
+  ],
+  "cta": "¿Vas a comprar algo mañana? Comenta",
+  "cta_voiceover": "¿Vas a comprar algo mañana? Cuéntame en los comentarios.",
+  "title": "El día de compras más grande del mundo NO es Black Friday",
+  "caption": "Mañana 11/11 es el Día de los Solteros 🛍️ ¿Lo conocías?",
+  "hashtags": [
+    "1111",
+    "singlesday",
+    "blackfriday",
+    "datoscuriosos",
+    "compras"
+  ]
+}

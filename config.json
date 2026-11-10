@@ -1,0 +1,15 @@
+{
+  "language": "es",
+  "audience": "hispanohablantes (México, LatAm, España)",
+  "niche": "datos curiosos, tendencias y tips útiles",
+  "tts_voice": "es-MX-JorgeNeural",
+  "tts_rate": "+8%",
+  "trends_geo": ["MX", "US", "ES"],
+  "videos_per_run": 1,
+  "min_queue": 4,
+  "platforms": {
+    "youtube": {"enabled": true, "privacy": "public"},
+    "instagram": {"enabled": true, "share_to_feed": true},
+    "tiktok": {"enabled": true, "mode": "inbox", "privacy_level": "SELF_ONLY"}
+  }
+}

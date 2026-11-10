@@ -1,0 +1,32 @@
+{
+  "id": "2026-11-10-ia-tiempo",
+  "label": "IA",
+  "topic": "Usos útiles de la IA",
+  "trend_reason": "Nicho tech/IA con alto rendimiento en formatos de lista.",
+  "hook": "3 cosas que le pido a la IA que me ahorran horas",
+  "slides": [
+    {
+      "text": "1. Resumir correos largos en 3 puntos",
+      "voiceover": "Uno: resumir correos larguísimos en tres puntos."
+    },
+    {
+      "text": "2. Convertir notas desordenadas en un plan",
+      "voiceover": "Dos: convertir mis notas desordenadas en un plan con pasos."
+    },
+    {
+      "text": "3. Practicar una conversación difícil",
+      "voiceover": "Tres: practicar una conversación difícil antes de tenerla, como pedir un aumento."
+    }
+  ],
+  "cta": "¿Cuál probarías primero?",
+  "cta_voiceover": "¿Cuál probarías primero? Te leo.",
+  "title": "3 cosas que le pido a la IA que me ahorran horas",
+  "caption": "La IA como asistente, no como reemplazo 🤖",
+  "hashtags": [
+    "ia",
+    "inteligenciaartificial",
+    "productividad",
+    "tips",
+    "tecnologia"
+  ]
+}

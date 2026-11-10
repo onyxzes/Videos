@@ -1,0 +1,35 @@
+{
+  "id": "2026-11-10-movember",
+  "label": "MOVEMBER",
+  "topic": "Movember",
+  "trend_reason": "Noviembre: Movember está activo en feeds.",
+  "hook": "¿Por qué tantos hombres se dejan bigote en noviembre?",
+  "slides": [
+    {
+      "text": "Se llama Movember: bigote + noviembre",
+      "voiceover": "Se llama Movember: la mezcla de moustache, bigote, y November."
+    },
+    {
+      "text": "Empezó en Australia en 2003",
+      "voiceover": "Empezó en Australia en dos mil tres, con un grupo de amigos."
+    },
+    {
+      "text": "El objetivo: hablar de la salud de los hombres",
+      "voiceover": "El objetivo es hablar de la salud masculina: cáncer de próstata, de testículo y salud mental."
+    },
+    {
+      "text": "El bigote es la excusa para iniciar la conversación",
+      "voiceover": "El bigote es solo la excusa para que alguien pregunte, y empezar la conversación."
+    }
+  ],
+  "cta": "Etiqueta a alguien que necesita ir al doctor",
+  "cta_voiceover": "Etiqueta a alguien que tiene pendiente ir al doctor.",
+  "title": "¿Por qué tantos hombres se dejan bigote en noviembre?",
+  "caption": "Movember no es solo moda 🥸 Es salud.",
+  "hashtags": [
+    "movember",
+    "saludmasculina",
+    "noviembre",
+    "datoscuriosos"
+  ]
+}
